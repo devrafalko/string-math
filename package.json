@@ -1,0 +1,46 @@
+{
+  "name": "string-math",
+  "version": "1.0.0",
+  "description": "Evaluates the result of the String arithmetical expression",
+  "main": "string-math.js",
+  "scripts": {
+    "test": "node tests/jasmine.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devrafalko/string-math.git"
+  },
+  "keywords": [
+    "string",
+    "math",
+    "arithmetic",
+    "result",
+    "parse",
+    "evaluate",
+    "addition",
+    "sum",
+    "plus",
+    "division",
+    "subtraction",
+    "multiplication",
+    "add",
+    "divide",
+    "subtract",
+    "multiple",
+    "equation",
+    "sign",
+    "mark",
+    "symbol",
+    "mathematical"
+  ],
+  "author": "Paweł Rafałko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devrafalko/string-math/issues"
+  },
+  "homepage": "https://github.com/devrafalko/string-math#readme",
+  "devDependencies": {
+    "jasmine": "^2.9.0",
+    "jasmine-spec-reporter": "^4.2.1"
+  }
+}
