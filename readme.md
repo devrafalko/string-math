@@ -61,7 +61,7 @@ var result = stringMath("2+2");
 
 # Usage
 
-### `stringMath(expression)`
+### `stringMath(expression[,callback])`
 ##### `expression` **[String]**
 * the arithmetical formula
 * it can contain:
@@ -74,6 +74,20 @@ var result = stringMath("2+2");
   * `+` plus sign
   * `-` subtraction sign
   * `(` and `)` parentheses
+
+##### `callback` **[Function]** *(optional)* *(synchronous)*
+* by default, if the `callback` argument **is omitted** and the `expression` is of incorrect type or is invalid, the `Error` object is **`thrown`**. If the `callback` is defined, the `Error` object is passed through the `callback` function, rather than being **`thrown`**.
+* if the [Function] `callback` argument is defined, it is called with the following arguments:
+  * [0] `error`  
+    It equals `null`, if the `expression` is of correct type and is valid math formula.  
+    Otherwise it equals `Error` object.
+  * [1] `result`  
+    It equals `null` if the `expression` is of incorrect type or if the math formula is invalid.  
+    Otherwise it equals [Number] result.
+
+# Return
+
+If the math formula is of correct type and is valid, it returns the [Number] result. Otherwise it returns `null`.
 
 # Tips
 * the arithmetic **order of operations** is respected:
