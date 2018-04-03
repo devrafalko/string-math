@@ -1,6 +1,6 @@
 function stringMath(eq){
   if(typeof eq !== 'string') throw TypeError('The [String] argument is expected.');
-  const mulDiv = /(-?\d*\.?\d+)\s*([*/])\s*([+-]?\d*\.?\d+)/;
+  const mulDiv = /([+-]?\d*\.?\d+)\s*([*/])\s*([+-]?\d*\.?\d+)/;
   const plusMin = /([+-]?\d*\.?\d+)\s*([+-])\s*([+-]?\d*\.?\d+)/;
   const parentheses = /(\d)?\s*\(([^()]*)\)\s*/;
   var current;
@@ -28,7 +28,8 @@ function stringMath(eq){
     while(eq.search(mulDiv)!==-1){
       eq = eq.replace(mulDiv,function(a){
         const sides = mulDiv.exec(a);
-        return sides[2]==='*' ? sides[1] * sides[3]:sides[1]/sides[3];
+         const result = sides[2]==='*' ? sides[1] * sides[3]:sides[1]/sides[3];
+         return result>= 0 ? `+${result}`:result;
       });
     }
     return eq;
