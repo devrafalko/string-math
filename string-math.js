@@ -1,10 +1,10 @@
 function stringMath(eq){
   if(typeof eq !== 'string') throw TypeError('The [String] argument is expected.');
-  const mulDiv = /([+-]?\d*\.?\d+)\s*([*/])\s*([+-]?\d*\.?\d+)/;
-  const plusMin = /([+-]?\d*\.?\d+)\s*([+-])\s*([+-]?\d*\.?\d+)/;
+  const mulDiv = /([+-]?\d*\.?\d+(?:e[+-]\d+)?)\s*([*/])\s*([+-]?\d*\.?\d+(?:e[+-]\d+)?)/;
+  const plusMin = /([+-]?\d*\.?\d+(?:e[+-]\d+)?)\s*([+-])\s*([+-]?\d*\.?\d+(?:e[+-]\d+)?)/;
   const parentheses = /(\d)?\s*\(([^()]*)\)\s*/;
   var current;
-  while(eq.search(/^\s*([+-]?\d*\.?\d+)\s*$/)===-1){
+  while(eq.search(/^\s*([+-]?\d*\.?\d+(?:e[+-]\d+)?)\s*$/)===-1){
     eq = fParentheses(eq);
     if(eq===current) throw new SyntaxError('The equation is invalid.');
     current = eq;

@@ -9,6 +9,7 @@
 "3*(5-2)"  //9
 " 2.5  *   2.5  /   .1" //62.5
 "3.5+5*(-4-(3/(3+1)-12*3-.2*22)-16/4*12-5/(2)+3.5+2.5*(1.5-2*7))-16" //-225.5
+".25e+2*10" //250
 ```
 
 * Any bugs found? Give me to know on [GitHub](https://github.com/devrafalko/string-math)
@@ -67,6 +68,7 @@ var result = stringMath("2+2");
   * `[0-9]` digits
   * `1.5`, `0.5` or `.5` decimal fractions
   * `-5`, `-.4`, `-5.55` negative values
+  * `2e-2`, `.25e+12`, `-3e-10` exponential notation values
   * `*` multiplication sign
   * `/` division sign
   * `+` plus sign
@@ -92,7 +94,9 @@ var result = stringMath("2+2");
   * `2 +  ( -2 - -2)`
   * ` 2  +  (+2  +   +4   /   -1)`
   * `  -.1   -   -5`
+  * `2 + 3e-5`
+  * `.25e+5 * -.25e-5`
 * the spaces are **not allowed** between:
   * negative sign and value: `-2 - - 2`
   * period and digit in decimal fraction: `5 + . 3`
-  * uneven opening and closing brackets: `5 + (3 * (3 + 4)` 
+  * exponential notation formula: `.2 e-5`, `2e - 5`, `3e +10`
