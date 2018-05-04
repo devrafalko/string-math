@@ -2,7 +2,7 @@
 
 `string-math` is a module *(function)* that computes the `[Number]` result from the `[String]` arithmetical formula.
 * It **does not use** `eval()`
-* It uses regular expressions to parse [String] equations
+* It uses regular expressions to parse [String] formulas `"2+2"` into [Number] formulas `2+2`. Then it is performed as the common JavaScript arithmetic operation.
 
 ```javascript
 "2 + 2"  //4
@@ -13,7 +13,7 @@
 ```
 
 * Any bugs found? Give me to know on [GitHub](https://github.com/devrafalko/string-math)
-* Also check out [**`exact-math`**](https://www.npmjs.com/package/exact-math) to compute arithmetical formulas with precise floating point values; *(get rid of `0.30000000000000004` values)*
+* If you need to perform arithmetic formulas with the **floating point precision** *(avoid `0.30000000000000004` return values)* or to perform arithmetic formulas with **big numbers**, check out [**`exact-math`**](https://www.npmjs.com/package/exact-math) package. It implements `string-math` features as the `exactMath.formula` method.
 
 
 # Installation
