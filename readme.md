@@ -73,6 +73,7 @@ var result = stringMath("2+2");
   * `/` division sign
   * `+` plus sign
   * `-` subtraction sign
+  * `%` modulo sign
   * `(` and `)` parentheses
 
 ##### `callback` **[Function]** *(optional)* *(synchronous)*
@@ -92,7 +93,7 @@ If the math formula is of correct type and is valid, it returns the [Number] res
 # Tips
 * the arithmetic **order of operations** is respected:
   * *parentheses first*
-  * *then division and multiplication (from left to right)*
+  * *then division, multiplication and modulo (from left to right)*
   * *then addition and subtraction (from left to right)*
 * the multiplication sign can be omitted before parentheses; `4(2+1)`; *equals to `4*(2+1)`*
 * the following signs combinations are allowed:
